@@ -1,0 +1,13 @@
+@keyframes dash {
+  0% {
+    border-spacing: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-dash {
+  animation: dash 8s linear infinite;
+}
