@@ -1,6 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ExternalLink, Github, Eye } from 'lucide-react';
+import chatBot from '../assets/chatBot-scr.png'
+import bookLibrary from '../assets/bookLibrary-scr.png'
+import socialMedia from '../assets/socialMedia-scr.png'
 
 const Projects = () => {
   const ref = useRef(null);
@@ -10,33 +13,34 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Redux'],
-      github: '#',
-      live: '#',
+      title: 'ChatBot AI',
+      description: 'Smart chatbot platform built with React and Redux, featuring live responses via Gemini Pro API in React Vite.',
+      // image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: chatBot,
+      technologies: ['React', 'Tailwind CSS', 'Firebase', 'Redux-Toolkit', 'Gemini API'],
+      github: 'https://github.com/Vishalchorala/ChatBot-AI.git',
+      live: 'https://vishal-chatbot.netlify.app/',
       featured: true,
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: 'https://images.pexels.com/photos/3153201/pexels-photo-3153201.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'TypeScript', 'Socket.io', 'MongoDB', 'Express'],
-      github: '#',
-      live: '#',
+      title: 'Book Library App',
+      description: ' Your smart companion for managing and exploring your personal book library in React Vite.',
+      image: bookLibrary,
+      technologies: ['React', 'Tailwind CSS', 'Supabase', 'Redux-Toolkit', 'Book API'],
+      github: 'https://github.com/Vishalchorala/Book-Library-App.git',
+      live: 'https://vishal-book-library-app.netlify.app/',
       featured: true,
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Vue.js', 'Chart.js', 'OpenWeather API', 'Tailwind CSS'],
-      github: '#',
-      live: '#',
-      featured: false,
+      title: 'Social Media App',
+      description: 'Create, edit, and delete posts on a fully responsive social media app secured with Firebase Authentication in React Vite.',
+      image: socialMedia,
+      technologies: ['React', 'Tailwind CSS', 'Firebase', 'Redux-Toolkit', 'Local Storage'],
+      github: 'https://github.com/Vishalchorala/Social-Media-App.git',
+      live: 'https://vishal-social-media-app.netlify.app/',
+      featured: true,
     },
     {
       id: 4,
@@ -117,9 +121,8 @@ const Projects = () => {
               <motion.div
                 key={project.id}
                 variants={itemVariants}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:grid-flow-dense' : ''
-                }`}
+                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''
+                  }`}
               >
                 <motion.div
                   className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}
@@ -134,10 +137,10 @@ const Projects = () => {
                       className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
-                    
+
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
-                      animate={{ 
+                      animate={{
                         opacity: hoveredProject === project.id ? 1 : 0,
                         y: hoveredProject === project.id ? 0 : 20
                       }}
@@ -164,7 +167,7 @@ const Projects = () => {
                 </motion.div>
 
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <motion.h3 
+                  <motion.h3
                     className="text-3xl font-bold text-white mb-4"
                     whileHover={{ x: 10 }}
                   >
@@ -173,7 +176,7 @@ const Projects = () => {
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-3 mb-6">
                     {project.technologies.map((tech) => (
                       <motion.span
@@ -212,7 +215,7 @@ const Projects = () => {
           </div>
 
           {/* Other Projects Grid */}
-          <motion.div variants={itemVariants}>
+          {/* <motion.div variants={itemVariants}>
             <h3 className="text-3xl font-bold text-center text-white mb-12">Other Projects</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {otherProjects.map((project) => (
@@ -229,11 +232,11 @@ const Projects = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60" />
                   </div>
-                  
+
                   <div className="p-6">
                     <h4 className="text-xl font-semibold text-white mb-3">{project.title}</h4>
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">{project.description}</p>
-                    
+
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.slice(0, 3).map((tech) => (
                         <span
@@ -273,7 +276,7 @@ const Projects = () => {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </section>

@@ -29,7 +29,7 @@ const Hero = () => {
           className="w-full md:w-1/2"
         >
           <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-6"
+            className="text-3xl md:text-6xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -77,13 +77,16 @@ const Hero = () => {
               View My Work
             </motion.button>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-purple-500 text-purple-400 px-8 py-3 rounded-full font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
-            >
-              Download CV
-            </motion.button>
+            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+              {/* <a href="/cv.pdf" download> */}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-purple-500 text-purple-400 px-8 py-3 rounded-full font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
+              >
+                Download CV
+              </motion.button>
+            </a>
           </motion.div>
 
           <motion.div
@@ -117,7 +120,7 @@ const Hero = () => {
           transition={{ delay: 0.6, duration: 1 }}
           className="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center md:justify-end"
         >
-          <div className="relative w-60 h-60 md:w-80 md:h-80 flex items-center justify-center">
+          <div className="relative w-48 h-48 md:w-80 md:h-80 flex items-center justify-center">
             <div className="absolute w-full h-full rounded-full border-4 border-dashed border-purple-500 animate-dash"></div>
             <img
               src="./src/assets/programmer3.png"
@@ -130,7 +133,7 @@ const Hero = () => {
 
       {/* SCROLL DOWN INDICATOR */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-2/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
@@ -142,7 +145,7 @@ const Hero = () => {
           <ChevronDown size={32} />
         </motion.button>
       </motion.div>
-    </section>
+    </section >
   );
 };
 

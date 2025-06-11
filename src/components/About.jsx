@@ -66,7 +66,7 @@ const About = () => {
               <div className="relative">
                 <div className="w-60 h-60 md:w-80 md:h-80 mx-auto bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10">
                   <div className="w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-full flex items-center justify-center">
-                    <span className="text-7xl md:text-8xl">👨‍💻</span>
+                    <span className="text-5xl md:text-8xl">👨‍💻</span>
                   </div>
                 </div>
                 <motion.div
@@ -83,7 +83,7 @@ const About = () => {
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="text-3xl font-bold text-white mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Passionate Developer
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed">
@@ -106,10 +106,10 @@ const About = () => {
                 practices to build seamless digital experiences.
               </p>
               <motion.div
-                className="flex flex-wrap gap-3 mt-6"
+                className="flex flex-wrap gap-3 mt-6 justify-center md:justify-start"
                 variants={itemVariants}
               >
-                {['Javascript', 'React', 'Next.js', 'Tailwind CSS', 'MUI','Github'].map((tech) => (
+                {['HTML5', 'CSS3', 'JavaScript', 'React JS'].map((tech) => (
                   <motion.span
                     key={tech}
                     whileHover={{ scale: 1.1 }}

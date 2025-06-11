@@ -6,15 +6,26 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const skills = [
-    { name: 'React/Next.js', level: 95, color: 'from-blue-500 to-cyan-500' },
-    { name: 'TypeScript', level: 90, color: 'from-blue-600 to-purple-600' },
-    { name: 'Node.js', level: 85, color: 'from-green-500 to-emerald-500' },
-    { name: 'Python', level: 80, color: 'from-yellow-500 to-orange-500' },
-    { name: 'PostgreSQL', level: 75, color: 'from-indigo-500 to-purple-500' },
-    { name: 'AWS/Cloud', level: 70, color: 'from-orange-500 to-red-500' },
-    { name: 'UI/UX Design', level: 85, color: 'from-pink-500 to-purple-500' },
-    { name: 'GraphQL', level: 75, color: 'from-purple-500 to-pink-500' },
+    { name: 'HTML 5 & CSS 3', level: 95, color: 'from-blue-500 to-cyan-500' },
+    { name: 'Javascript', level: 90, color: 'from-blue-600 to-purple-600' },
+    { name: 'React JS', level: 85, color: 'from-green-500 to-emerald-500' },
+    { name: 'Next JS', level: 80, color: 'from-yellow-500 to-orange-500' },
+    { name: 'Redux Toolkit', level: 75, color: 'from-indigo-500 to-purple-500' },
+    { name: 'Material UI', level: 70, color: 'from-orange-500 to-red-500' },
+    { name: 'Github', level: 85, color: 'from-pink-500 to-purple-500' },
+    { name: 'Responsive Design', level: 75, color: 'from-purple-500 to-pink-500' },
   ];
+
+  //   const skills = [
+  //   { name: 'HTML 5 & CSS 3', level: 95, color: 'from-blue-500 to-cyan-500' },
+  //   { name: 'Javascript', level: 90, color: 'from-blue-600 to-purple-600' },
+  //   { name: 'React JS', level: 85, color: 'from-green-500 to-emerald-500' },
+  //   { name: 'Next JS', level: 80, color: 'from-yellow-500 to-orange-500' },
+  //   { name: 'Tailwind CSS', level: 75, color: 'from-indigo-500 to-purple-500' },
+  //   { name: 'Material UI', level: 70, color: 'from-orange-500 to-red-500' },
+  //   { name: 'Git & GitHub', level: 85, color: 'from-pink-500 to-purple-500' },
+  //   { name: 'Responsive Design', level: 75, color: 'from-purple-500 to-pink-500' },
+  // ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -96,8 +107,8 @@ const Skills = () => {
             <h3 className="text-2xl font-bold text-white mb-8">Tools & Platforms</h3>
             <div className="flex flex-wrap justify-center gap-4">
               {[
-                'VS Code', 'Git', 'Docker', 'Figma', 'Webpack', 'Jest',
-                'Tailwind CSS', 'MongoDB', 'Redis', 'Vercel', 'Netlify', 'Firebase'
+                'VS Code', 'Git',
+                'Tailwind CSS', 'Netlify', 'Firebase','Supabase'
               ].map((tool, index) => (
                 <motion.div
                   key={tool}

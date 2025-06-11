@@ -13,17 +13,17 @@ const Contact = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      }, 3000);
-    }, 1000);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Simulate form submission
+  //   setTimeout(() => {
+  //     setIsSubmitted(true);
+  //     setTimeout(() => {
+  //       setIsSubmitted(false);
+  //       setFormData({ name: '', email: '', subject: '', message: '' });
+  //     }, 3000);
+  //   }, 1000);
+  // };
 
   const handleChange = (e) => {
     setFormData({
@@ -36,19 +36,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'alex.johnson@email.com',
-      href: 'mailto:alex.johnson@email.com',
+      value: 'pintuchorala2004@gmail.com',
+      href: 'mailto:pintuchorala2004@gmail.com',
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+91 90818 51548',
+      href: '+91 90818 51548',
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Ribda, Rajkot (Gujarat)',
       href: '#',
     },
   ];
@@ -95,7 +95,7 @@ const Contact = () => {
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-8">
               <h3 className="text-2xl font-bold text-white mb-8">Let's Connect</h3>
-              
+
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={index}
@@ -128,16 +128,20 @@ const Contact = () => {
               >
                 <h4 className="text-xl font-semibold text-white mb-4">Available for freelance work</h4>
                 <p className="text-gray-300 leading-relaxed">
-                  I'm currently available for freelance projects and collaboration. 
-                  Whether you need a complete web application, API development, or just want to 
-                  bring your ideas to life, I'd love to help.
+                  {/* I'm currently available for freelance projects and collaboration.
+                  Whether you need a complete web application or just want to
+                  bring your ideas to life, I'd love to help. */}
+                  I'm Open to freelance and collaborative projects — I help build responsive web apps and improve user experiences with clean, scalable front-end development.
                 </p>
               </motion.div>
             </motion.div>
 
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                action="https://formspree.io/f/mrbzvwae"
+                method="POST"
+                className="space-y-6 md:mt-16 mt-0">
                 <div className="grid md:grid-cols-2 gap-6">
                   <motion.div
                     whileFocus={{ scale: 1.02 }}
@@ -153,7 +157,7 @@ const Contact = () => {
                       className="w-full px-4 py-3 bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all duration-300"
                     />
                   </motion.div>
-                  
+
                   <motion.div
                     whileFocus={{ scale: 1.02 }}
                     className="relative"

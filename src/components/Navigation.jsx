@@ -27,7 +27,7 @@ const Navigation = () => {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsOpen(false);
+    // setIsOpen(false);
   };
 
   return (
@@ -92,7 +92,10 @@ const Navigation = () => {
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => {
+                  scrollToSection(item.href);
+                  setTimeout(() => setIsOpen(false), 800);
+                }}
                 whileHover={{ x: 10 }}
                 className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium w-full text-center"
               >

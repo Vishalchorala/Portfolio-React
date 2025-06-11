@@ -16,12 +16,12 @@ const Footer = () => {
   return (
     <footer className="bg-slate-900/50 backdrop-blur-sm border-t border-white/10 py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-8 md:mb-0"
+            className="mb-8 md:mb-0 text-center md:text-start"
           >
             <motion.button
               onClick={scrollToTop}
@@ -60,7 +60,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 pt-8 border-t border-white/10 text-center"
         >
-          <div className="flex items-center justify-center space-x-2 text-gray-400">
+          {/* <div className="flex items-center justify-center space-x-2 text-gray-400">
             <span>Made with</span>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
@@ -69,7 +69,7 @@ const Footer = () => {
               <Heart size={16} className="text-red-500 fill-current" />
             </motion.div>
             <span>using React & Framer Motion</span>
-          </div>
+          </div> */}
           <p className="text-gray-500 mt-2 text-sm">
             © {new Date().getFullYear()} Vishal Chorala. All rights reserved.
           </p>
