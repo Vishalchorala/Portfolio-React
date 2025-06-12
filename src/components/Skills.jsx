@@ -6,26 +6,15 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const skills = [
-    { name: 'HTML 5 & CSS 3', level: 95, color: 'from-blue-500 to-cyan-500' },
-    { name: 'Javascript', level: 90, color: 'from-blue-600 to-purple-600' },
+    { name: 'HTML 5 & CSS 3', level: 90, color: 'from-blue-500 to-cyan-500' },
+    { name: 'Javascript', level: 80, color: 'from-blue-600 to-purple-600' },
     { name: 'React JS', level: 85, color: 'from-green-500 to-emerald-500' },
-    { name: 'Next JS', level: 80, color: 'from-yellow-500 to-orange-500' },
-    { name: 'Redux Toolkit', level: 75, color: 'from-indigo-500 to-purple-500' },
-    { name: 'Material UI', level: 70, color: 'from-orange-500 to-red-500' },
+    { name: 'Next JS', level: 60, color: 'from-yellow-500 to-orange-500' },
+    { name: 'Redux Toolkit', level: 70, color: 'from-indigo-500 to-purple-500' },
+    { name: 'Material UI', level: 60, color: 'from-orange-500 to-red-500' },
     { name: 'Github', level: 85, color: 'from-pink-500 to-purple-500' },
-    { name: 'Responsive Design', level: 75, color: 'from-purple-500 to-pink-500' },
+    { name: 'Responsive Design', level: 80, color: 'from-purple-500 to-pink-500' },
   ];
-
-  //   const skills = [
-  //   { name: 'HTML 5 & CSS 3', level: 95, color: 'from-blue-500 to-cyan-500' },
-  //   { name: 'Javascript', level: 90, color: 'from-blue-600 to-purple-600' },
-  //   { name: 'React JS', level: 85, color: 'from-green-500 to-emerald-500' },
-  //   { name: 'Next JS', level: 80, color: 'from-yellow-500 to-orange-500' },
-  //   { name: 'Tailwind CSS', level: 75, color: 'from-indigo-500 to-purple-500' },
-  //   { name: 'Material UI', level: 70, color: 'from-orange-500 to-red-500' },
-  //   { name: 'Git & GitHub', level: 85, color: 'from-pink-500 to-purple-500' },
-  //   { name: 'Responsive Design', level: 75, color: 'from-purple-500 to-pink-500' },
-  // ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -76,7 +65,7 @@ const Skills = () => {
                   <h3 className="text-lg font-semibold text-white">{skill.name}</h3>
                   <span className="text-gray-400 text-sm">{skill.level}%</span>
                 </div>
-                
+
                 <div className="relative h-3 bg-slate-700 rounded-full overflow-hidden">
                   <motion.div
                     className={`absolute top-0 left-0 h-full bg-gradient-to-r ${skill.color} rounded-full`}
@@ -87,9 +76,9 @@ const Skills = () => {
                   <motion.div
                     className={`absolute top-0 left-0 h-full bg-gradient-to-r ${skill.color} rounded-full opacity-50`}
                     animate={{ x: [0, 100, 0] }}
-                    transition={{ 
-                      duration: 2, 
-                      repeat: Infinity, 
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
                       delay: index * 0.2,
                       ease: 'easeInOut'
                     }}
@@ -108,7 +97,7 @@ const Skills = () => {
             <div className="flex flex-wrap justify-center gap-4">
               {[
                 'VS Code', 'Git',
-                'Tailwind CSS', 'Netlify', 'Firebase','Supabase'
+                'Tailwind CSS', 'Netlify', 'Firebase', 'Supabase'
               ].map((tool, index) => (
                 <motion.div
                   key={tool}

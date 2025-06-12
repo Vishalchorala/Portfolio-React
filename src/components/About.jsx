@@ -89,10 +89,10 @@ const About = () => {
               <p className="text-gray-300 text-lg leading-relaxed">
                 Hi, I'm Vishal Chorala, a passionate front-end developer from Rajkot, Gujarat.
                 I have successfully completed a Web Development course at Dreamspot IT Academy.
-                {/* and gained hands-on
+                and gained hands-on
                 experience as a front-end developer at
-                <i><b><u><a href="https://bhavintechnolabs.com/" class="about-intern"> Bhavin
-                  Technolabs</a></u></b></i>. */}
+                <i><b><u><a href="https://bhavintechnolabs.com/"> Bhavin
+                  Technolabs</a></u></b></i>.
                 I have also completed my Bachelor's degree in Computer Applications (BCA) from Saurashtra
                 University.
               </p>
@@ -100,8 +100,7 @@ const About = () => {
                 {/* I love tackling complex problems and turning creative ideas into reality. When I'm not
                 coding, you can find me exploring new technologies, contributing to open-source projects,
                 or enjoying a good cup of coffee while sketching new design concepts. */}
-                I specialize in creating responsive, user-friendly, and dynamic web applications using the latest
-                HTML, CSS, JavaScript, and React technologies.
+                I specialize in creating responsive, user-friendly, and dynamic web applications using the latest technologies.
                 My focus is on enhancing UI/UX design, optimizing website performance, and implementing best coding
                 practices to build seamless digital experiences.
               </p>

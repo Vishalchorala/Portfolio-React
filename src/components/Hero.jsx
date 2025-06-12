@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
-import '../styles/AnimatedBorder.css' // <-- Create this CSS file
+import '../styles/AnimatedBorder.css'
 
 const Hero = () => {
   const scrollToNext = () => {

@@ -27,7 +27,6 @@ const Navigation = () => {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
-    // setIsOpen(false);
   };
 
   return (

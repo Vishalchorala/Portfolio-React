@@ -52,26 +52,6 @@ const Projects = () => {
       live: '#',
       featured: false,
     },
-    {
-      id: 5,
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website with smooth animations, dark/light theme, and optimized performance.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Framer Motion', 'Tailwind CSS', 'TypeScript'],
-      github: '#',
-      live: '#',
-      featured: false,
-    },
-    {
-      id: 6,
-      title: 'AI Chat Application',
-      description: 'Real-time chat application with AI-powered responses, message encryption, and multimedia sharing capabilities.',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Next.js', 'OpenAI API', 'WebSocket', 'Prisma', 'MySQL'],
-      github: '#',
-      live: '#',
-      featured: false,
-    },
   ];
 
   const containerVariants = {

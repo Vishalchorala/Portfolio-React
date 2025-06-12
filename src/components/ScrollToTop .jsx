@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronUp } from "lucide-react";
+import { HiArrowSmUp } from "react-icons/hi";
 
 const ScrollToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -35,14 +35,14 @@ const ScrollToTop = () => {
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={scrollToTop}
-                    className="fixed bottom-8 right-8 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm border border-white/20"
+                    className="fixed bottom-6 right-6 z-50 p-1 lg:p-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm border border-white/20"
                     aria-label="Scroll to top"
                 >
                     <motion.div
                         animate={{ y: [0, -3, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
                     >
-                        <ChevronUp size={24} />
+                        <HiArrowSmUp size={22} />
                     </motion.div>
                 </motion.button>
             )}

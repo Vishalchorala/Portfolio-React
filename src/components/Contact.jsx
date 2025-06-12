@@ -12,6 +12,7 @@ const Contact = () => {
     message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -92,6 +93,7 @@ const Contact = () => {
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
+
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-8">
               <h3 className="text-2xl font-bold text-white mb-8">Let's Connect</h3>
@@ -128,9 +130,6 @@ const Contact = () => {
               >
                 <h4 className="text-xl font-semibold text-white mb-4">Available for freelance work</h4>
                 <p className="text-gray-300 leading-relaxed">
-                  {/* I'm currently available for freelance projects and collaboration.
-                  Whether you need a complete web application or just want to
-                  bring your ideas to life, I'd love to help. */}
                   I'm Open to freelance and collaborative projects — I help build responsive web apps and improve user experiences with clean, scalable front-end development.
                 </p>
               </motion.div>
@@ -139,7 +138,7 @@ const Contact = () => {
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
               <form
-                action="https://formspree.io/f/mrbzvwae"
+                action={import.meta.env.VITE_FORMSPREE_ENDPOINT}
                 method="POST"
                 className="space-y-6 md:mt-16 mt-0">
                 <div className="grid md:grid-cols-2 gap-6">
