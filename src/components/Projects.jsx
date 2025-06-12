@@ -130,6 +130,7 @@ const Projects = () => {
                         href={project.github}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
+                        target='_blank' 
                         className="p-3 bg-slate-800/80 backdrop-blur-sm rounded-full text-white hover:bg-slate-700 transition-colors"
                       >
                         <Github size={24} />
@@ -138,6 +139,7 @@ const Projects = () => {
                         href={project.live}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
+                        target='_blank'
                         className="p-3 bg-slate-800/80 backdrop-blur-sm rounded-full text-white hover:bg-slate-700 transition-colors"
                       >
                         <ExternalLink size={24} />
@@ -174,6 +176,7 @@ const Projects = () => {
                       href={project.github}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
+                      target='_blank'
                       className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors"
                     >
                       <Github size={20} />
@@ -183,6 +186,7 @@ const Projects = () => {
                       href={project.live}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
+                      target='_blank'
                       className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors"
                     >
                       <ExternalLink size={20} />

@@ -86,7 +86,7 @@ const About = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Passionate Developer
               </h3>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-200 text-lg leading-relaxed">
                 Hi, I'm Vishal Chorala, a passionate front-end developer from Rajkot, Gujarat.
                 I have successfully completed a Web Development course at Dreamspot IT Academy.
                 and gained hands-on
@@ -96,7 +96,7 @@ const About = () => {
                 I have also completed my Bachelor's degree in Computer Applications (BCA) from Saurashtra
                 University.
               </p>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-200 text-lg leading-relaxed">
                 {/* I love tackling complex problems and turning creative ideas into reality. When I'm not
                 coding, you can find me exploring new technologies, contributing to open-source projects,
                 or enjoying a good cup of coffee while sketching new design concepts. */}

@@ -45,6 +45,7 @@ const Footer = () => {
                 href={link.href}
                 whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.9 }}
+                target='_blank'
                 className="text-gray-400 hover:text-white transition-colors duration-300"
                 aria-label={link.label}
               >
