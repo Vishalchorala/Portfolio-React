@@ -1,30 +1,37 @@
-import React, { useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import React, { useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   // Simulate form submission
-  //   setTimeout(() => {
-  //     setIsSubmitted(true);
-  //     setTimeout(() => {
-  //       setIsSubmitted(false);
-  //       setFormData({ name: '', email: '', subject: '', message: '' });
-  //     }, 3000);
-  //   }, 1000);
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    form.submit();
+
+    setIsSubmitted(true);
+    toast.success("Message sent successfully!", {
+      position: "top-right",
+      autoClose: 3000,
+    });
+
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    }, 3000);
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -36,21 +43,21 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      title: 'Email',
-      value: 'pintuchorala2004@gmail.com',
-      href: 'mailto:pintuchorala2004@gmail.com',
+      title: "Email",
+      value: "pintuchorala2004@gmail.com",
+      href: "mailto:pintuchorala2004@gmail.com",
     },
     {
       icon: Phone,
-      title: 'Phone',
-      value: '+91 90818 51548',
-      href: '+91 90818 51548',
+      title: "Phone",
+      value: "+91 90818 51548",
+      href: "+91 90818 51548",
     },
     {
       icon: MapPin,
-      title: 'Location',
-      value: 'Ribda, Rajkot (Gujarat)',
-      href: '#',
+      title: "Location",
+      value: "Ribda, Rajkot (Gujarat)",
+      href: "#",
     },
   ];
 
@@ -74,13 +81,16 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
+    <section
+      id="contact"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30"
+    >
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
+          animate={isInView ? "visible" : "hidden"}
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -88,15 +98,17 @@ const Contact = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
             <p className="text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
-              I'm always open to discussing new opportunities, creative projects, or just having a chat about technology.
+              I'm always open to discussing new opportunities, creative
+              projects, or just having a chat about technology.
             </p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-8">
-              <h3 className="text-2xl font-bold text-white mb-8">Let's Connect</h3>
+              <h3 className="text-2xl font-bold text-white mb-8">
+                Let's Connect
+              </h3>
 
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -115,7 +127,7 @@ const Contact = () => {
                     <p className="text-gray-400 text-sm">{info.title}</p>
                     <motion.a
                       href={info.href}
-                      whileHover={{ color: '#60A5FA' }}
+                      whileHover={{ color: "#60A5FA" }}
                       className="text-white font-medium hover:text-blue-400 transition-colors"
                     >
                       {info.value}
@@ -128,24 +140,30 @@ const Contact = () => {
                 variants={itemVariants}
                 className="mt-12 p-6 bg-gradient-to-r from-blue-500/10 to-purple-600/10 backdrop-blur-sm border border-blue-400/20 rounded-xl"
               >
-                <h4 className="text-xl font-semibold text-white mb-4">Available for freelance work</h4>
+                <h4 className="text-xl font-semibold text-white mb-4">
+                  Available for freelance work
+                </h4>
                 <p className="text-gray-300 leading-relaxed">
-                  I'm Open to freelance and collaborative projects — I help build responsive web apps and improve user experiences with clean, scalable front-end development.
+                  I'm Open to freelance and collaborative projects — I help
+                  build responsive web apps and improve user experiences with
+                  clean, scalable front-end development.
                 </p>
               </motion.div>
             </motion.div>
 
+            <iframe name="form-target" style={{ display: "none" }}></iframe>
             {/* Contact Form */}
+            <Toaster position="top-right" reverseOrder={false} />
             <motion.div variants={itemVariants}>
               <form
                 action={import.meta.env.VITE_FORMSPREE_ENDPOINT}
                 method="POST"
-                className="space-y-6 md:mt-16 mt-0">
+                className="space-y-6 md:mt-16 mt-0"
+                onSubmit={handleSubmit}
+                target="form-target"
+              >
                 <div className="grid md:grid-cols-2 gap-6">
-                  <motion.div
-                    whileFocus={{ scale: 1.02 }}
-                    className="relative"
-                  >
+                  <motion.div whileFocus={{ scale: 1.02 }} className="relative">
                     <input
                       type="text"
                       name="name"
@@ -157,10 +175,7 @@ const Contact = () => {
                     />
                   </motion.div>
 
-                  <motion.div
-                    whileFocus={{ scale: 1.02 }}
-                    className="relative"
-                  >
+                  <motion.div whileFocus={{ scale: 1.02 }} className="relative">
                     <input
                       type="email"
                       name="email"

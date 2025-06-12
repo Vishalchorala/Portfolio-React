@@ -18,7 +18,7 @@ const ScrollToTop = () => {
         return () => window.removeEventListener("scroll", toggleVisibility);
     }, []);
 
-    const scrollToTop = () => {
+    const scrollToTopBtn = () => {
         window.scrollTo({
             top: 0,
             behavior: "smooth",
@@ -34,7 +34,7 @@ const ScrollToTop = () => {
                     exit={{ opacity: 0, scale: 0.5, y: 20 }}
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.9 }}
-                    onClick={scrollToTop}
+                    onClick={scrollToTopBtn}
                     className="fixed bottom-6 right-6 z-50 p-1 lg:p-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm border border-white/20"
                     aria-label="Scroll to top"
                 >

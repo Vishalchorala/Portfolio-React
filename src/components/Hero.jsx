@@ -11,6 +11,13 @@ const Hero = () => {
     }
   };
 
+  const scrollToProjects = () => {
+    const projectSection = document.querySelector("#projects");
+    if (projectSection) {
+      projectSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="home"
@@ -71,7 +78,7 @@ const Hero = () => {
                 boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)",
               }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToNext()}
+              onClick={scrollToProjects}
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             >
               View My Work
