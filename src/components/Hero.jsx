@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
-import '../styles/AnimatedBorder.css'
+import "../styles/AnimatedBorder.css";
+import heroImg from "../assets/programmer3.png";
 
 const Hero = () => {
   const scrollToNext = () => {
@@ -25,9 +26,7 @@ const Hero = () => {
     >
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20" />
 
-      <div
-        className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center justify-between relative z-10 text-center md:text-left gap-7 md:gap-16"
-      >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center justify-between relative z-10 text-center md:text-left gap-7 md:gap-16">
         {/* LEFT TEXT SECTION */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -63,7 +62,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            React.js & Frontend Developer focused on building responsive, interactive web applications.
+            React.js & Frontend Developer focused on building responsive,
+            interactive web applications.
           </motion.p>
 
           <motion.div
@@ -104,7 +104,10 @@ const Hero = () => {
           >
             {[
               { Icon: Github, href: "https://github.com/Vishalchorala" },
-              { Icon: Linkedin, href: "https://www.linkedin.com/in/vishal-chorala-28378a21b/" },
+              {
+                Icon: Linkedin,
+                href: "https://www.linkedin.com/in/vishal-chorala-28378a21b/",
+              },
               { Icon: Mail, href: "mailto:pintuchorala2004@gmail.com" },
             ].map(({ Icon, href }, index) => (
               <motion.a
@@ -131,7 +134,7 @@ const Hero = () => {
           <div className="relative w-48 h-48 md:w-80 md:h-80 flex items-center justify-center">
             <div className="absolute w-full h-full rounded-full border-4 border-dashed border-purple-500 animate-dash"></div>
             <img
-              src="./src/assets/programmer3.png"
+              src={heroImg}
               alt="Hero"
               className="w-full h-full object-cover rounded-full"
             />
@@ -153,7 +156,7 @@ const Hero = () => {
           <ChevronDown size={32} />
         </motion.button>
       </motion.div>
-    </section >
+    </section>
   );
 };
 
