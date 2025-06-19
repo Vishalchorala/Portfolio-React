@@ -4,7 +4,7 @@ A modern and responsive personal portfolio built using **React**, **Vite**, **Ta
 
 ## 📸 Live Demo
 
-[View Live Site](https://your-portfolio-link.com)
+[View Live Site](https://vishalchorala.dev)
 
 ## 🛠️ Tech Stack
 
