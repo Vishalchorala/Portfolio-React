@@ -1,6 +1,6 @@
 # 🚀 Personal Portfolio Website
 
-A modern and responsive personal portfolio built using **React**, **Vite**, **Tailwind CSS**, and **Framer Motion**.
+A modern and responsive personal portfolio built using **React-Vite**, **Tailwind CSS**, and **Framer Motion**.
 
 ## 📸 Live Demo
 
