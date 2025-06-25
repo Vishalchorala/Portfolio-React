@@ -29,7 +29,7 @@ A modern and responsive personal portfolio built using **React-Vite**, **Tailwin
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/your-portfolio.git
+git clone (https://github.com/Vishalchorala/Portfolio-React.git)
 
 # Navigate to project directory
 cd your-portfolio
