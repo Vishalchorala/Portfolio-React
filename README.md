@@ -18,7 +18,7 @@ A modern and responsive personal portfolio built using **React-Vite**, **Tailwin
 - Responsive design for all devices
 - Smooth scrolling and elegant animations
 - Clean and modern UI
-- Well-structured sections:
+- Well-structured sections
   - **Home** – Eye-catching hero section
   - **About** – Introduction and short bio
   - **Skills** – List of technical skills
